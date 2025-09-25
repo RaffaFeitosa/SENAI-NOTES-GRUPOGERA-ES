@@ -1,0 +1,75 @@
+.main{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+}
+
+.cabeçalio{
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid rgb(209, 197, 197);
+}
+
+.left-side{
+    width: 20vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    border-right: 2px solid rgb(209, 197, 197);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notes{
+    display: flex;
+    justify-content: start;
+    height: 8%;
+    width: 80%;
+    background-color: rgb(141, 111, 111);
+}
+
+.img-notes{
+
+height: 75px;
+width: 57px;
+object-fit: cover;
+border-radius: 8px;
+display: block;
+
+}
+
+.btn-notes{
+    width: 80%;
+    margin: 10px 0px 10px;
+    background-color: rgb(25, 25, 218);
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    border: none;
+}
+
+.description{
+margin: 3px 0px 1;
+}
+
+.detalhes{
+    font-size: 10px;
+    width: 3%;
+    height: 3%;
+    display: flex;
+}
+
+.itens{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    width: 70%;
+    height: 40px;
+    background-color: aqua;
+}
+
+.any-det{
+   margin-left: 10px;
+}
