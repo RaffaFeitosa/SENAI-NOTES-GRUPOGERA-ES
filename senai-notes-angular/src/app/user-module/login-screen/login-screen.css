@@ -21,21 +21,46 @@ main {
   justify-content: center;
   gap: 16px;
   padding: 48px;
+
 }
 
 .campo {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 
 }
 
 .campo input {
-
+  border: 1px solid #cacfc8;
+  border-radius: 8px;
   width: 100%;
+  height: 44px;
+
+
 }
 
-.campo button {
+.bt {
   width: 100%;
   background-color: blue;
   color: white;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  height: 44px;
 }
+.psw {
+  display: flex;
+  justify-content: space-between;
 
+}
+.cadastro {
+display: flex;
+border-top: 1px solid black;
+align-items: end;
+height: 30px;
+width: 100%;
+justify-content: center;
+
+}
