@@ -13,11 +13,8 @@ export class LoginScreen {
   emailErrorMessege: string;
   passwordErrorMessege: string;
 constructor(private fb: FormBuilder, private cd: ChangeDetectorRef) {
-    //Quando a tela iniciar.
 
-    //Inicia o formulario
-    //Cria o campo obrigatório de email.
-    //Cria o campo obrigatório de senha.
+
     this.loginForm = this.fb.group({
 
       email: ["", [Validators.required]],
@@ -32,7 +29,7 @@ constructor(private fb: FormBuilder, private cd: ChangeDetectorRef) {
 
   async onLoginClick() {
 
-    //alert("Botão de login clicado.");
+
     this.emailErrorMessege = "";
     this.passwordErrorMessege = "";
 
@@ -55,7 +52,7 @@ constructor(private fb: FormBuilder, private cd: ChangeDetectorRef) {
 
 
     let response = await fetch("https://senai-gpt-api.azurewebsites.net/login", {
-      method: "POST", //ENVIAR,
+      method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
