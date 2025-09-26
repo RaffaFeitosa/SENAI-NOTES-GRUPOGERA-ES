@@ -1,0 +1,34 @@
+<main>
+  <form class="formulario" action="" [formGroup]="newUserScreen">
+    <img src="img/logo.png" alt="">
+    <h2>Create Your Account</h2>
+    <p style="font-size: 14px; color: #525866;">Sign up to start organizing your notes and boost your productivity.</p>
+
+
+      <div class="campo">
+      <p>Name</p>
+      <input type="text" placeholder=" insert name" formControlName="name" (keydown.enter)="onEnterClick()">
+    </div>
+    <div class="campo">
+      <p>Email Address</p>
+      <input type="text" placeholder=" exemple@email.com" formControlName="email"(keydown.enter)="onEnterClick()">
+    </div>
+    <div class="campo">
+      <nav class="psw">
+        <p>Password</p>
+      </nav>
+      <input type="password" formControlName="password"(keydown.enter)="onEnterClick()">
+      <div class="info">
+<img style="size: 14px; color: #525866;" src="img/circle.png" alt="">
+<p style="font-size: 12px; color: #525866;">At least 8 characters</p>
+
+      </div>
+    </div>
+
+    <button class="bt" (click)=" onEnterClick()">Sign up</button>
+
+    <div class="cadastro">
+      <nav style="color: #525866;">Already have an account?<a href="http://localhost:4200/login-screen" style="color: black;"> Login</a></nav>
+    </div>
+  </form>
+</main>

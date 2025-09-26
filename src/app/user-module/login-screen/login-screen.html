@@ -1,0 +1,26 @@
+<main >
+  <form class="formulario" action="" [formGroup]="loginForm">
+    <img src="img/logo.png" alt="">
+    <h2>Welcome to Note</h2>
+    <p>Please log in to continue</p>
+
+    <div class="campo">
+      <p>Email Address</p>
+
+
+       <input type="text" placeholder=" exemple@email.com" formControlName="email">
+    </div>
+    <div class="campo">
+      <nav class="psw">
+        <p>Password</p> <a href="" style="color: #525866;">Forgot</a>
+      </nav>
+      <input type="password" placeholder=" enter your password" formControlName="password">
+    </div>
+
+    <button class="bt" (click)=" onLoginClick()">Login</button>
+
+    <div class="cadastro">
+      <nav style="color: #525866;">No account yet?<a href="/newUser" style="color: black;"> Sign Up</a></nav>
+    </div>
+  </form>
+</main>
