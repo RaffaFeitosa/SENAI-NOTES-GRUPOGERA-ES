@@ -14,8 +14,18 @@
     align-items: center;
 }
 
+.cabeçalio img{
+margin-left: 40px;
+}
+
+.cabeçalio input{
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
 .left-side{
-    width: 20vw;
+    width: 358px;
     height: 100vh;
     background-color: rgb(255, 255, 255);
     border-right: 2px solid rgb(209, 197, 197);
@@ -27,10 +37,12 @@
 .notes{
     display: flex;
     justify-content: start;
-    height: 8%;
+    height: 10%;
     width: 80%;
     background-color: rgb(238, 233, 233);
     border-radius: 10px;
+    margin-top: 20px;
+    
 }
 
 .img-notes{
@@ -89,4 +101,13 @@ margin: 3px 0px 1;
 
 .any-det{
    margin-left: 10px;
+}
+
+.every{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 100%;
+    align-items: center;
+    
 }
