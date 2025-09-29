@@ -1,11 +1,19 @@
 .main{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-color: rgb(255, 255, 255);
+   
+}
+
+.douw{
+    display: flex;
+    height: 90%;
+    width: 100%;
+
 }
 
 .cabeçalio{
-    width: 100vw;
+    width: 100%;
     height: 87px;
     background-color: rgb(255, 255, 255);
     display: flex;
@@ -19,14 +27,15 @@ margin-left: 40px;
 }
 
 .cabeçalio input{
-    padding: 10px;
-    border-radius: 5px;
-
+    width: 20%;
+    padding: 15px;
+    border-radius: 10px;
+    margin-right: 70px;
 }
 
 .left-side{
     width: 358px;
-    height: 100vh;
+    height: 100%;
     background-color: rgb(255, 255, 255);
     border-right: 2px solid rgb(209, 197, 197);
     display: flex;
@@ -46,7 +55,6 @@ margin-left: 40px;
 }
 
 .img-notes{
-
 height: 90%;
 width: 20%;
 object-fit: cover;
@@ -58,9 +66,9 @@ margin: 5px 0px 10px 5px;
 
 .btn-notes{
     width: 80%;
-    margin: 10px 0px 10px;
+    margin: 30px 0px 10px;
     background-color: rgb(25, 25, 218);
-    border-radius: 5px;
+    border-radius: 10px;
     height: 40px;
     color: white;
     border: none;
@@ -83,11 +91,12 @@ margin: 3px 0px 1;
     background-color: rgb(173, 171, 171);
     color: black;
     margin-right: 10px;
-    border-radius: 5px;
+    border-radius: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
+    padding: 8px;
 }
 
 .itens{
@@ -110,4 +119,109 @@ margin: 3px 0px 1;
     width: 100%;
     align-items: center;
     
+}
+
+.center-panel{
+    width: 63%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid rgb(209, 197, 197);
+
+}
+
+.c-all{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.center-panel img{
+    height: 135px;
+    width: 100%;
+    margin: 30px 0 16px 0 ;
+    border-radius: 5px;
+    
+   
+}
+
+.descript-upp{
+    font-size: 20px;
+    border-bottom: 1px solid rgb(209, 197, 197);
+    display: flex;
+    flex-direction: column;
+}
+
+.descript-upp h5{
+    margin:5px 5% 5px 0 ;
+}
+
+.c-detalhes{
+    display: flex;
+    
+}
+
+.obj{
+    display: flex;
+    font-size: 15px;
+    height: 100%;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.title{
+    padding: 10px;
+    background-color: transparent;
+    width: 30%;
+    border: none;
+    font-size: 20px;
+    
+}
+
+.descript-center{
+    width: 100%;
+    height: 60%;
+   
+    border-bottom: 1px solid rgb(199, 195, 195);;
+}
+
+.descript-daw-obj{
+    width: 100%;
+    height: 80%;
+    margin: 30px 0 30px 0;
+    background-color: transparent;
+    border: none;
+    resize: none;
+    font-size: 15px;
+    
+}
+
+.btn-daw{
+    width: 100px;
+    margin:30px 20px ;
+    padding: 13px;
+    border-radius: 10px;
+    background-color: rgb(42, 42, 230);
+    color: #FFFFFF;
+    border: none;
+}
+
+.btn-daw-can{
+    width: 100px;
+    margin:30px 20px ;
+    padding: 13px;
+    border-radius: 10px;
+    background-color: #F3F5F8;
+    color: black;
+    border: none;
+}
+
+.rigth-side{
+     width: 358px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
 }
