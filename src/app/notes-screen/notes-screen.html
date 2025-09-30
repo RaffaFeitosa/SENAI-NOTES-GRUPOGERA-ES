@@ -10,7 +10,7 @@
 
         <div class="left-side">
 
-            <button class="btn-notes">+ Create New Note</button>
+            <button class="btn-notes" (click)="criarNota()">+ Create New Note</button>
 
             <div class="every">
 
@@ -21,8 +21,8 @@
 
                     <div class="itens">
 
-                        <div class="description">
-                            <h4>estudos</h4>
+                        <div class="description" >
+                            {{novaNota.nome}}
 
                             <div class="c-detalhes">
 
