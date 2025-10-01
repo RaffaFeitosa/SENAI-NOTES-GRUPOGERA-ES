@@ -16,6 +16,7 @@ export class NotesScreen {
 
   novaNota: INota = {
     nome: ""
+
   }!;
 
   async criarNota() {
