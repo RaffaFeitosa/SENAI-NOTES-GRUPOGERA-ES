@@ -14,9 +14,9 @@
 
             <div class="every">
 
- @for (chat of novaNota.nome; track $index){
+ @for (nota of notas; track $index){
+     <button class="notes" (click)="onNoteClick(notaSelecionada)">
 
-     <button class="notes">
          
          <img class="img-notes" src="img/img-cod.webp" alt="img">
          
