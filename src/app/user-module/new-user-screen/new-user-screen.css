@@ -1,13 +1,27 @@
 main {
-
-  height: 100vh;
+  height: 95vh;
   width: 100vw;
   background-color: #F3F5F8;
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
+header {
+  width: 100vw;
+  height: 5vh;
+  background-color: #F3F5F8;
+  display: flex;
+  justify-content: end;
+}
 
+.darkmode {
+  color: black;
+  font-size: 28px;
+  background-color: transparent;
+  border: none;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
 
@@ -69,4 +83,34 @@ justify-content: center;
 display: flex;
 gap: 8px;
 
+}
+.loginn{
+  color: #1c1c1c;
+}
+
+::ng-deep body.dark-mode main{
+  background-color: #1c1c1c
+}
+::ng-deep body.dark-mode header{
+  background-color: #1c1c1c;
+}
+::ng-deep body.dark-mode .darkmode{
+  color: white;
+}
+::ng-deep body.dark-mode .formulario {
+
+  background-color: black;
+  color: white;
+}
+::ng-deep body.dark-mode .cadastro{
+  color: white;
+}
+::ng-deep body.dark-mode .campo{
+  color: white;
+}
+::ng-deep body.dark-mode .campo input{
+  background-color: #1c1c1c;
+}
+::ng-deep body.dark-mode .loginn{
+  color: gray;
 }

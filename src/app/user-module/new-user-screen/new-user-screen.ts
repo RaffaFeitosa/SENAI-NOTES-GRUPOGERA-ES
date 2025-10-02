@@ -14,7 +14,7 @@ export class NewUserScreen {
   nameErrorMessege: string;
   emailErrorMessege: string;
   passwordErrorMessege: string;
-
+  darkmode: boolean = false;
 
   constructor(private fb: FormBuilder, private cd: ChangeDetectorRef) {
     this.newUserScreen = this.fb.group({
@@ -92,5 +92,14 @@ export class NewUserScreen {
 
     this.cd.detectChanges();
   }
+  ligarDesligarDarkMode() {
+
+      this.darkmode = !this.darkmode;
+
+      document.body.classList.toggle("dark-mode", this.darkmode);
+
+      localStorage.setItem("darkmode", this.darkmode.toString());
+
+    }
 }
 

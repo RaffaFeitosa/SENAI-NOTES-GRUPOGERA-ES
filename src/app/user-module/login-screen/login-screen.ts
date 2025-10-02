@@ -12,6 +12,7 @@ export class LoginScreen {
 
   emailErrorMessege: string;
   passwordErrorMessege: string;
+  darkmode: boolean = false;
 constructor(private fb: FormBuilder, private cd: ChangeDetectorRef) {
 
 
@@ -85,6 +86,16 @@ constructor(private fb: FormBuilder, private cd: ChangeDetectorRef) {
 
     this.cd.detectChanges();
   }
+ligarDesligarDarkMode() {
+
+      this.darkmode = !this.darkmode;
+
+      document.body.classList.toggle("dark-mode", this.darkmode);
+
+      localStorage.setItem("darkmode", this.darkmode.toString());
+
+    }
+
 }
 
 

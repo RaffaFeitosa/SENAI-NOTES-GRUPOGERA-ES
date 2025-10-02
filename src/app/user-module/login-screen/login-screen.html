@@ -1,6 +1,11 @@
-<main >
-  <form class="formulario" action="" [formGroup]="loginForm">
-    <img src="img/logo.png" alt="">
+
+<header>
+  <button class="darkmode" (click)="ligarDesligarDarkMode()"><i class="fa-regular fa-lightbulb"></i></button>
+</header>
+<main>
+    <form class="formulario" action="" [formGroup]="loginForm">
+    <img [src]="darkmode == true? 'img/logo22.png' : 'img/logo.png'">
+    <!-- <img [src]="darkMode == true? 'imgs/LOGODARK.png' : 'imgs/LOGO.png'" alt="Login SenaiGPT"> -->
     <h2>Welcome to Note</h2>
     <p>Please log in to continue</p>
 
@@ -20,7 +25,9 @@
     <button class="bt" (click)=" onLoginClick()">Login</button>
 
     <div class="cadastro">
-      <nav style="color: #525866;">No account yet?<a href="/newUser" style="color: black;"> Sign Up</a></nav>
+      <nav style="color: #525866;">No account yet?<a class= "signup"href="/newUser"> Sign Up</a></nav>
     </div>
   </form>
+
 </main>
+
