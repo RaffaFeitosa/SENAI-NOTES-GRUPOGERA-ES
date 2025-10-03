@@ -4,8 +4,10 @@ import { firstValueFrom } from 'rxjs';
 
 
 interface INota {
-  nome: string;
-  UserId: string
+  titulo: string;
+  UserId: string;
+  id : ""
+
 
 }
 
@@ -19,7 +21,7 @@ export class NotesScreen {
 
   notaSelecionada: INota;
   notas: INota[];
-  novaNota: INota = { nome: "", UserId: "meuId" };
+  novaNota: INota = { titulo: "", UserId: "meuId", id : "" };
 
   constructor(private http: HttpClient, private cd: ChangeDetectorRef) {
 
@@ -27,6 +29,11 @@ export class NotesScreen {
       this.notas = [];
        
 
+    }
+
+    ngOnInit() {
+      // Executado quando a tela carrega
+      this.getNotas();
     }
 
   async criarNota() {
@@ -42,12 +49,15 @@ export class NotesScreen {
 
     const novoChatObj = {
 
-      chatTitle: nomeNota,
-      userId: localStorage.getItem("meuId"),
+      titulo : nomeNota,
+      usuarioId : localStorage.getItem("meuId"),
+      tags: [],
+      descricao : "",
+      imagemURL : "",
 
     }
 
-    let novoChatResponse = await firstValueFrom(this.http.post("https://senai-gpt-api.azurewebsites.net/chats", novoChatObj, {
+    let novoChatResponse = await firstValueFrom(this.http.post("http://localhost:3000/notas", novoChatObj, {
       headers: {
         "content-Type": "application/json",
         Authorization: "Bearer " + localStorage.getItem("meuToken")
@@ -62,7 +72,7 @@ export class NotesScreen {
 
   async getNotas(){
 
-    let response = await firstValueFrom(this.http.get("https://senai-gpt-api.azurewebsites.net/chats",{
+    let response = await firstValueFrom(this.http.get("http://localhost:3000/notas",{
       headers:{
 
         "Authorization": "Bearer " + localStorage.getItem("meuToken")
@@ -78,11 +88,13 @@ export class NotesScreen {
 
       let userId = localStorage.getItem("meuId");
 
-      response = response.filter(chat => chat.UserId == userId);
+      // response = response.filter(chat => chat.UserId == userId);
 
       
       this.notas = response as []
+      this.cd.detectChanges();
     }
+
 
       
   }
@@ -92,7 +104,8 @@ export class NotesScreen {
     this.notaSelecionada = noteClicado
     //logca para buscar mensagens
 
-    let response = await firstValueFrom(this.http.get("https://senai-gpt-api.azurewebsites.net/messages?chatId=",{
+    let response = await firstValueFrom(this.http.get("http://localhost:3000/notas?notaId=" + this.notaSelecionada.UserId,{
+
       
     }
 
@@ -105,3 +118,11 @@ export class NotesScreen {
 }
 
 
+
+
+
+//FLUXO
+
+//getNotes
+//OnNoteclick
+//OnNoteSave

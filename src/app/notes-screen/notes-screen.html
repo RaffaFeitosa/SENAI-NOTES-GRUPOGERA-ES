@@ -14,36 +14,36 @@
 
             <div class="every">
 
- @for (nota of notas; track $index){
-     <button class="notes" (click)="onNoteClick(notaSelecionada)">
+                @for (nota of notas; track $index){
+                <button class="notes" (click)="onNoteClick(nota)">
 
-         
-         <img class="img-notes" src="img/img-cod.webp" alt="img">
-         
-         <div class="itens">
-             
-             <div class="description" >
-                 {{novaNota.nome}}
-                 
-                 <div class="c-detalhes">
-                     
-                     <div class="detalhes">
-                         <p>detalhes</p>
+
+                    <img class="img-notes" src="img/img-cod.webp" alt="img">
+
+                    <div class="itens">
+
+                        <div class="description">
+                            {{nota.titulo}}
+
+                            <div class="c-detalhes">
+
+                                <div class="detalhes">
+                                    <p>detalhes</p>
+                                </div>
+
+                                <div class="Detalhes">
+                                    <p>SOS</p>
+                                </div>
+
+                            </div>
+
                         </div>
-                        
-                        <div class="Detalhes">
-                            <p>SOS</p>
-                        </div>
-                        
+
                     </div>
-                    
-                </div>
-                
-            </div>
-            
-        </button>
-        
-    }
+
+                </button>
+
+                }
 
 
 
@@ -51,7 +51,9 @@
 
         </div>
 
-        
+        @if(notaSelecionada != null){
+
+
         <div class="center-panel">
 
 
@@ -62,14 +64,14 @@
 
                 <div class="descript-upp">
 
-                    <input class="title" type="text">
+                    <input class="title" type="text" value= {{notaSelecionada.titulo}} >
 
 
                     <div class="c-detalhes"></div>
 
                     <div class="obj">
                         <h5>Tags</h5>
-                        <h5>Dev</h5>
+                        <select name="escolha" id="aaaa"></select>
                     </div>
 
                     <div class="obj">
@@ -84,18 +86,20 @@
                     <textarea class="descript-daw-obj" name="olouco" id=""></textarea>
                 </div>
 
-                 <div class="descript-daw">
+                <div class="descript-daw">
 
                     <button class="btn-daw">Save Note</button>
-                    
+
                     <button class="btn-daw-can">Delete</button>
 
-                 </div>
+                </div>
 
 
             </div>
 
         </div>
+
+        }
 
         <div class="rigth-side">
         </div>
