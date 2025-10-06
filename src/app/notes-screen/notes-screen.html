@@ -63,15 +63,14 @@
                 <img src="/img/img-cod.webp" alt="">
 
                 <div class="descript-upp">
-
-                    <input class="title" type="text" value= {{notaSelecionada.titulo}} >
+                    <input class="title" [formControl]="tituloInput" type="text" value={{notaSelecionada.titulo}}>
 
 
                     <div class="c-detalhes"></div>
 
                     <div class="obj">
                         <h5>Tags</h5>
-                        <select name="escolha" id="aaaa"></select>
+                        <select class="selecter" name="escolha" id="aaaa"></select>
                     </div>
 
                     <div class="obj">
@@ -83,26 +82,27 @@
                 </div>
 
                 <div class="descript-center">
-                    <textarea class="descript-daw-obj" name="olouco" id=""></textarea>
+                    <textarea [(ngModel)]="notaSelecionada.descricao" class="descript-daw-obj" name="olouco"
+                        id=""></textarea>
                 </div>
 
                 <div class="descript-daw">
 
-                    <button class="btn-daw">Save Note</button>
+                    <button class="btn-daw" (click)="onNoteSave()">Save Note</button>
 
-                    <button class="btn-daw-can">Delete</button>
+                    <button class="btn-daw-can" (click)="cancelarNota()">Cancelar</button>
 
                 </div>
-
 
             </div>
 
         </div>
 
+        <div class="rigth-side">
+            <button class="delete" (click)="deletarNotaSelecionada()">delete</button>
+        </div>
         }
 
-        <div class="rigth-side">
-        </div>
 
     </div>
 
