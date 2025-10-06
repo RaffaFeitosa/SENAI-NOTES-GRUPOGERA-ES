@@ -1,23 +1,8 @@
 {
   "notas": [
     {
-<<<<<<< HEAD
       "id": "08fa",
       "titulo": "ARIEL BONITAO",
-=======
-      "titulo": "titulo da nota",
-      "descricao": "descricao da nota",
-      "imagemURL": "link da imagem ",
-      "usuarioId": 1,
-      "tags": [
-        "Tag 1"
-      ],
-      "id": "0b52"
-    },
-    {
-      "id": "1524",
-      "titulo": "rafael",
->>>>>>> e840fcf6b0812fe877665315730f410edabcd474
       "usuarioId": "84e97055-9c6d-4cbe-84bf-67e792516a95",
       "tags": [],
       "descricao": "ESSE CARA É 3000",
