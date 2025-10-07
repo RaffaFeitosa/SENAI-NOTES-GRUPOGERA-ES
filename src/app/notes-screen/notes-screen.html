@@ -3,10 +3,12 @@
     <header class="cabeçalio">
 
         <img [src]="darkmode == true? 'img/logo22.png' : 'img/logo.png'">
+        <div class="pesquisa">
         <input type="text" placeholder="Search by title, content, or tags…">
         <div class="icons">
         <button class="darkmode" (click)="ligarDesligarDarkMode()"><i class="fa-regular fa-lightbulb"></i></button>
         <button class="logout" (click)="onClickLogout()"><i class="fa-solid fa-power-off"></i></button>
+        </div>
         </div>
     </header>
 

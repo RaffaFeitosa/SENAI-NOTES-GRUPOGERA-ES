@@ -4,13 +4,23 @@
   background-color: rgb(255, 255, 255);
 
 }
+.pesquisa {
+  display: flex;
+}
+
+.pesquisa input{
+  width: 500px;
+  padding: 15px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
 
 .icons {
   font-size: 26px;
   margin-right: 20px;
   display: flex;
   justify-content: space-between;
-   font-size: 28px;
+  font-size: 28px;
 }
 
 .douw {
@@ -37,13 +47,6 @@
 
 .cabeçalio img {
   margin-left: 40px;
-}
-
-.cabeçalio input {
-  width: 20%;
-  padding: 15px;
-  border-radius: 10px;
-  margin-right: 70px;
 }
 
 .left-side {
