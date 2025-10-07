@@ -16,6 +16,9 @@ justify-content: space-between;
     height: 90%;
     width: 100%;
 
+.douw p {
+    color: black;
+    margin: 20px;
 }
 
 .cabeçalio{
@@ -56,22 +59,24 @@ margin-left: 40px;
 
 .notes{
     display: flex;
-    justify-content: start;
+    align-items: center;
     height: 10%;
     width: 80%;
     background-color: rgb(238, 233, 233);
     border-radius: 10px;
     margin-top: 20px;
+    border: none;
 
 }
 
 .img-notes{
-height: 90%;
+height: 85%;
 width: 20%;
 object-fit: cover;
 border-radius: 8px;
 display: block;
-margin: 5px 0px 10px 5px;
+margin: 5PX;
+border: none;
 
 }
 
@@ -87,14 +92,17 @@ margin: 5px 0px 10px 5px;
 
 .description{
 margin: 3px 0px 1;
+align-items: flex-start;
+display: flex;
+flex-direction: column;
 }
 
-.c-detalhes{
+.c-tags{
     display: flex;
     margin-top: 10px;
 }
 
-.detalhes{
+.tags{
     font-size: 10px;
     width: 50px;
     height: 13px;
@@ -196,7 +204,7 @@ margin: 3px 0px 1;
     display: flex;
     font-size: 15px;
     height: 100%;
-    width: 30%;
+    width: 90%;
     justify-content: space-between;
 }
 
@@ -272,7 +280,7 @@ margin: 3px 0px 1;
 }
 ::ng-deep body.dark-mode .cabeçalio{
   background-color: #1c1c1c
- 
+
   }
 ::ng-deep body.dark-mode .darkmode {
   color: white;

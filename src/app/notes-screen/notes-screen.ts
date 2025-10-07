@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { Token } from '@angular/compiler';
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 import { firstValueFrom } from 'rxjs';
 
 
@@ -10,6 +12,7 @@ interface INota {
   UserId: string;
   id: "";
   descricao: string;
+  tags:string[],
 }
 
 @Component({
@@ -25,12 +28,22 @@ export class NotesScreen {
   notas: INota[];
   novaNota: INota = { titulo: "", UserId: "meuId", id: "", descricao: "" };
   darkmode: boolean = false;
+  novaNota: INota = { titulo: "", UserId: "meuId", id: "", descricao: "", tags: []};
+
+  tagSelecionada: "";
+
+  tagsDisponiveis = [
+    "Dev",
+    "cooking",
+    "Work",
+    "home",
+  ];
 
   constructor(private http: HttpClient, private cd: ChangeDetectorRef) {
 
     this.notaSelecionada = null!;
     this.notas = [];
-
+    this.tagSelecionada = "";
 
   }
 
@@ -78,7 +91,7 @@ export class NotesScreen {
     let response = await firstValueFrom(this.http.get("http://localhost:3000/notas", {
       headers: {
 
-        "Authorization": "Bearer " + localStorage.getItem("meuToken")
+        "Authorization": "Bearer " + localStorage.getItem("meuId")
 
 
       }
@@ -113,13 +126,16 @@ export class NotesScreen {
 
   async onNoteSave() {
     this.notaSelecionada.titulo = this.tituloInput.value;
+    this.notaSelecionada.tags = [this.tagSelecionada];
+
+
     let response = await firstValueFrom(this.http.put("http://localhost:3000/notas/" + this.notaSelecionada.id, this.notaSelecionada)) as INota[];
 
     if (response) {
 
       console.log("atualizado", response);
       let userId = localStorage.getItem("meuId");
-      // response = response.filter(chat => chat.UserId == userId);
+      response = response.filter(tagSelecionada => tagSelecionada.id == userId);
       this.cd.detectChanges();
     }
   }
@@ -147,6 +163,7 @@ export class NotesScreen {
 
     this.notaSelecionada = null!;
     this.getNotas();
+    this.cd.detectChanges();
   }
 
   async cancelarNota() {
@@ -155,6 +172,7 @@ export class NotesScreen {
   }
   ligarDesligarDarkMode() {
 
+<<<<<<< HEAD
     this.darkmode = !this.darkmode;
 
     document.body.classList.toggle("dark-mode", this.darkmode);
@@ -165,12 +183,14 @@ export class NotesScreen {
   onClickLogout() {
     localStorage.removeItem("meuToken")
     localStorage.removeItem("meuId")
-    
+
      window.location.href = "login-screen"
 
 
   }
 
+=======
+>>>>>>> d2d93a6e3720426efb87fe4685dc93a158da0e59
 }
 
 
