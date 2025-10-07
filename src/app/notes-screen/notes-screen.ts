@@ -183,8 +183,7 @@ export class NotesScreen {
     localStorage.removeItem("meuId")
 
      window.location.href = "login-screen"
-
-
+     
   }
 
 }
