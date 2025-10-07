@@ -2,14 +2,19 @@
     height: 100%;
     width: 100%;
     background-color: rgb(255, 255, 255);
-   
+
+}
+.icons{
+font-size: 26px;
+margin-right: 20px;
+display: flex;
+justify-content: space-between;
 }
 
 .douw{
     display: flex;
     height: 90%;
     width: 100%;
-    
 
 }
 
@@ -43,6 +48,10 @@ margin-left: 40px;
     flex-direction: column;
     align-items: center;
     overflow-y:scroll ;
+
+}
+.left-side::-webkit-scrollbar{
+  height: 0px;
 }
 
 .notes{
@@ -53,7 +62,7 @@ margin-left: 40px;
     background-color: rgb(238, 233, 233);
     border-radius: 10px;
     margin-top: 20px;
-    
+
 }
 
 .img-notes{
@@ -100,6 +109,22 @@ margin: 3px 0px 1;
     border: none;
     padding: 8px;
 }
+.darkmode {
+  color: black;
+  font-size: 28px;
+  background-color: transparent;
+  border: none;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.logout {
+  color: black;
+  font-size: 28px;
+  background-color: transparent;
+  border: none;
+  margin-top: 10px;
+  margin-right: 10px;
+}
 
 .itens{
     display: flex;
@@ -107,7 +132,7 @@ margin: 3px 0px 1;
     margin: 5px;
     width: 70%;
     height: 80%px;
-    
+
 }
 
 .any-det{
@@ -120,7 +145,7 @@ margin: 3px 0px 1;
     height: 80%;
     width: 100%;
     align-items: center;
-    
+
 }
 
 .center-panel{
@@ -138,7 +163,7 @@ margin: 3px 0px 1;
     width: 90%;
     display: flex;
     flex-direction: column;
-    
+
 }
 
 
@@ -147,8 +172,8 @@ margin: 3px 0px 1;
     width: 100%;
     margin: 30px 0 16px 0 ;
     border-radius: 5px;
-    
-   
+
+
 }
 
 .descript-upp{
@@ -164,7 +189,7 @@ margin: 3px 0px 1;
 
 .c-detalhes{
     display: flex;
-    
+
 }
 
 .obj{
@@ -181,14 +206,14 @@ margin: 3px 0px 1;
     width: 30%;
     border: none;
     font-size: 20px;
-    
+
 }
 
 .descript-center{
     width: 100%;
     height: 60%;
-   
-    border-bottom: 1px solid rgb(199, 195, 195);;
+
+    border-bottom: 1px solid rgb(199, 195, 195);
 }
 
 .descript-daw-obj{
@@ -199,7 +224,7 @@ margin: 3px 0px 1;
     border: none;
     resize: none;
     font-size: 15px;
-    
+
 }
 
 .btn-daw{
@@ -229,6 +254,7 @@ margin: 3px 0px 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: grey;
 }
 
 .selecter{
@@ -243,4 +269,107 @@ margin: 3px 0px 1;
     height: 40px;
     color: rgb(0, 0, 0);
     border: none
+}
+::ng-deep body.dark-mode .cabeçalio{
+  background-color: #1c1c1c
+  border: 2px solid 
+  }
+::ng-deep body.dark-mode .darkmode {
+  color: white;
+  font-size: 28px;
+  background-color: transparent;
+  border: none;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+::ng-deep body.dark-mode .logout {
+  color: white;
+  font-size: 28px;
+  background-color: transparent;
+  border: none;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+::ng-deep body.dark-mode .cabeçalio{
+    width: 100%;
+    height: 87px;
+    background-color:black;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    align-items: center;
+}
+::ng-deep body.dark-mode .cabeçalio input{
+    width: 20%;
+    padding: 15px;
+    border-radius: 10px;
+    margin-right: 70px;
+    background-color:black;
+    color: #F3F5F8;
+    border-color: #F3F5F8;
+  }
+::ng-deep body.dark-mode .left-side{
+    width: 358px;
+    height: 100%;
+    background-color: black;
+    border-right: 2px solid gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y:scroll ;
+}
+::ng-deep body.dark-mode .notes{
+    display: flex;
+    justify-content: start;
+    height: 10%;
+    width: 80%;
+    background-color: black;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: #F3F5F8;
+}
+
+::ng-deep body.dark-mode .btn-notes{
+    width: 80%;
+    margin: 30px 0px 10px;
+    background-color: rgb(25, 25, 218);
+    border-radius: 10px;
+    height: 40px;
+    color: white;
+    border: none;
+}
+::ng-deep body.dark-mode .detalhes{
+    background-color: #2B303B;
+    color: rgb(255, 255, 255);
+}
+::ng-deep body.dark-mode .every{
+  background-color: black;
+}
+::ng-deep body.dark-mode .douw{
+  background-color: black;
+
+}
+::ng-deep body.dark-mode .center-panel{
+  background-color: #1c1c1c;
+  color: #F3F5F8;
+  border-right: white
+}
+::ng-deep body.dark-mode .title{
+    color: white;
+}
+::ng-deep body.dark-mode .btn-daw-can{
+    background-color:black;
+    color: #F3F5F8;
+    border: none;}
+
+::ng-deep body.dark-mode .rigth-side{
+  background-color: black ;
+  border-color: white;
+}
+::ng-deep body.dark-mode .delete{
+  background-color: #1c1c1c;
+  color: white;
+}
+::ng-deep body.dark-mode .descript-daw-obj{
+  color: white;
 }

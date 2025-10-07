@@ -24,6 +24,7 @@ export class NotesScreen {
   notaSelecionada: INota;
   notas: INota[];
   novaNota: INota = { titulo: "", UserId: "meuId", id: "", descricao: "" };
+  darkmode: boolean = false;
 
   constructor(private http: HttpClient, private cd: ChangeDetectorRef) {
 
@@ -152,7 +153,23 @@ export class NotesScreen {
     this.notaSelecionada = null!
     console.log("nenhuma nota selecionada")
   }
+  ligarDesligarDarkMode() {
 
+    this.darkmode = !this.darkmode;
+
+    document.body.classList.toggle("dark-mode", this.darkmode);
+
+    localStorage.setItem("darkmode", this.darkmode.toString());
+
+  }
+  onClickLogout() {
+    localStorage.removeItem("meuToken")
+    localStorage.removeItem("meuId")
+    
+     window.location.href = "login-screen"
+
+
+  }
 
 }
 
