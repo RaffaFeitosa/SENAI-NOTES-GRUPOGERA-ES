@@ -26,7 +26,6 @@ export class NotesScreen {
   tituloInput = new FormControl();
   notaSelecionada: INota;
   notas: INota[];
-  novaNota: INota = { titulo: "", UserId: "meuId", id: "", descricao: "" };
   darkmode: boolean = false;
   novaNota: INota = { titulo: "", UserId: "meuId", id: "", descricao: "", tags: []};
 
@@ -172,7 +171,6 @@ export class NotesScreen {
   }
   ligarDesligarDarkMode() {
 
-<<<<<<< HEAD
     this.darkmode = !this.darkmode;
 
     document.body.classList.toggle("dark-mode", this.darkmode);
@@ -189,8 +187,6 @@ export class NotesScreen {
 
   }
 
-=======
->>>>>>> d2d93a6e3720426efb87fe4685dc93a158da0e59
 }
 
 
