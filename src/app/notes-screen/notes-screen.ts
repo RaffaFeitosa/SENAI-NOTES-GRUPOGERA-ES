@@ -12,7 +12,7 @@ interface INota {
   UserId: string;
   id: "";
   descricao: string;
-  tags:string[],
+  tags: string[],
 }
 
 @Component({
@@ -27,7 +27,7 @@ export class NotesScreen {
   notaSelecionada: INota;
   notas: INota[];
   darkmode: boolean = false;
-  novaNota: INota = { titulo: "", UserId: "meuId", id: "", descricao: "", tags: []};
+  novaNota: INota = { titulo: "", UserId: "meuId", id: "", descricao: "", tags: [] };
 
   tagSelecionada: "";
 
@@ -37,6 +37,8 @@ export class NotesScreen {
     "Work",
     "home",
   ];
+  arquivoImagem: File | null = null;  // mantém o arquivo selecionado
+  urlImagem = '';
 
   constructor(private http: HttpClient, private cd: ChangeDetectorRef) {
 
@@ -182,11 +184,45 @@ export class NotesScreen {
     localStorage.removeItem("meuToken")
     localStorage.removeItem("meuId")
 
-     window.location.href = "login-screen"
-     
+    window.location.href = "login-screen"
+
+  }
+
+  async definirImagem(evento: Event): Promise<void> {
+
+    const input = evento.target as HTMLInputElement;
+    if (!input.files || input.files.length === 0) {
+      alert('Selecione uma imagem.');
+      return;
+    }
+
+    const file = input.files[0];
+
+    // Validações simples (opcional, mas recomendado)
+    const tiposPermitidos = ['image/jpeg', 'image/png', 'image/webp'];
+    const tamanhoMaxMB = 5;
+
+    if (!tiposPermitidos.includes(file.type)) {
+      alert('Tipo inválido. Use JPG, PNG ou WEBP.');
+      return;
+    }
+    if (file.size > tamanhoMaxMB * 1024 * 1024) {
+      alert(`Arquivo muito grande (máx. ${tamanhoMaxMB}MB).`);
+      return;
+    }
+
+    // Libera a URL anterior (evita vazamento de memória)
+    if (this.urlImagem) {
+      URL.revokeObjectURL(this.urlImagem);
+    }
+
+    // Guarda o arquivo e gera a URL local para preview imediato
+    this.arquivoImagem = file;
+    this.urlImagem = URL.createObjectURL(file);
   }
 
 }
+
 
 
 
