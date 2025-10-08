@@ -321,9 +321,9 @@
 }
 
 ::ng-deep body.dark-mode .cabeçalio {
-  background-color: #1c1c1c
-}
-
+  background-color: #1c1c1c;
+  border-bottom: 2px solid white;
+ }
 ::ng-deep body.dark-mode .darkmode {
   color: white;
   font-size: 28px;
@@ -348,7 +348,9 @@
   background-color: black;
   display: flex;
   justify-content: space-between;
-  border: 2px solid black;
+  border-top:white;
+  border-left: none;
+  border-right: none;
   align-items: center;
 }
 
@@ -360,6 +362,7 @@
   background-color: black;
   color: #F3F5F8;
   border-color: #F3F5F8;
+  border: 1px solid white;
 }
 
 ::ng-deep body.dark-mode .left-side {
@@ -381,7 +384,7 @@
   background-color: black;
   border-radius: 10px;
   margin-top: 20px;
-  color: #F3F5F8;
+  color: #f7f7f7;
 }
 
 ::ng-deep body.dark-mode .btn-notes {
@@ -411,7 +414,7 @@
 ::ng-deep body.dark-mode .center-panel {
   background-color: #1c1c1c;
   color: #F3F5F8;
-  border-right: white
+  border-right: 1px solid  white
 }
 
 ::ng-deep body.dark-mode .title {
