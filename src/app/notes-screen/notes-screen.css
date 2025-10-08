@@ -290,9 +290,9 @@
 }
 
 ::ng-deep body.dark-mode .cabeçalio {
-  background-color: #1c1c1c
-}
-
+  background-color: #1c1c1c;
+  border: 2px solid white;
+ }
 ::ng-deep body.dark-mode .darkmode {
   color: white;
   font-size: 28px;
@@ -317,7 +317,7 @@
   background-color: black;
   display: flex;
   justify-content: space-between;
-  border: 2px solid black;
+  border: 2px solid white;
   align-items: center;
 }
 
@@ -380,7 +380,7 @@
 ::ng-deep body.dark-mode .center-panel {
   background-color: #1c1c1c;
   color: #F3F5F8;
-  border-right: white
+  border-right: 1px solid  white
 }
 
 ::ng-deep body.dark-mode .title {

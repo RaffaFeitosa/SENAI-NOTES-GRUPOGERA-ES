@@ -1,26 +1,6 @@
 {
   "notas": [
     {
-      "id": "c9f6",
-      "titulo": "Ariel",
-      "usuarioId": null,
-      "tags": [
-        "Dev"
-      ],
-      "descricao": "Um cara bacana\n",
-      "imagemURL": ""
-    },
-    {
-      "id": "089b",
-      "titulo": "Rafa",
-      "usuarioId": "f308e80f-d2fe-471d-95ab-70228ba2ed61",
-      "tags": [
-        "cooking"
-      ],
-      "descricao": "",
-      "imagemURL": ""
-    },
-    {
       "id": "dc24",
       "titulo": "oi",
       "usuarioId": "f308e80f-d2fe-471d-95ab-70228ba2ed61",
