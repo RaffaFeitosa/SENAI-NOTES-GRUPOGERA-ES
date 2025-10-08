@@ -5,20 +5,10 @@
       "titulo": "Ariel",
       "usuarioId": "f308e80f-d2fe-471d-95ab-70228ba2ed61",
       "tags": [
-        "cooking"
+        ""
       ],
       "descricao": "aaaaaaaaaaaaaaa",
-      "imagemURL": ""
-    },
-    {
-      "id": "98e4",
-      "titulo": "oi",
-      "usuarioId": "f308e80f-d2fe-471d-95ab-70228ba2ed61",
-      "tags": [
-        "home"
-      ],
-      "descricao": "aakakakak",
-      "imagemURL": ""
+      "imagemURL": "blob:http://localhost:4200/ae4df740-a2c4-4995-84d3-13d5939d891e"
     }
   ]
 }

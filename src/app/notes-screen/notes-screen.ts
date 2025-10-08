@@ -13,7 +13,7 @@ interface INota {
   id: "";
   descricao: string;
   tags: string[],
-  image: string,
+  imagemURL: string,
 }
 
 @Component({
@@ -28,7 +28,7 @@ export class NotesScreen {
   notaSelecionada: INota;
   notas: INota[];
   darkmode: boolean = false;
-  novaNota: INota = { titulo: "", UserId: "meuId", id: "", descricao: "", tags: [],image:"" };
+  novaNota: INota = { titulo: "", UserId: "meuId", id: "", descricao: "", tags: [],imagemURL:"" };
 
   tagSelecionada: "";
 
@@ -129,6 +129,7 @@ export class NotesScreen {
   async onNoteSave() {
     this.notaSelecionada.titulo = this.tituloInput.value;
     this.notaSelecionada.tags = [this.tagSelecionada];
+   this.notaSelecionada.imagemURL = this.urlImagem
 
 
     let response = await firstValueFrom(this.http.put("http://localhost:3000/notas/" + this.notaSelecionada.id, this.notaSelecionada)) as INota[];
@@ -221,7 +222,6 @@ export class NotesScreen {
     this.arquivoImagem = file;
     this.urlImagem = URL.createObjectURL(file);
     this.cd.detectChanges();
-
   }
 
 }

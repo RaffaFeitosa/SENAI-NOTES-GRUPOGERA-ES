@@ -25,7 +25,7 @@
                 <button class="notes" (click)="onNoteClick(nota)">
 
 
-                    <img class="img-notes" src="img/img-cod.webp" alt="img">
+                    <img class="img-notes" *ngIf="(urlImagem || notaSelecionada.id) as src" src={{nota.imagemURL}} alt="preview">
 
                     <div class="itens">
 
@@ -66,7 +66,7 @@
 
             <div class="c-all">
 
-                <img *ngIf="(urlImagem || notaSelecionada.UserId) as src" [src]="src" alt="preview" />
+                <img *ngIf="(urlImagem || notaSelecionada.id) as src" src={{notaSelecionada.imagemURL}} alt="preview" />
                 
 
                 <div class="descript-upp">
