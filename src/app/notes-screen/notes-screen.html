@@ -4,11 +4,12 @@
 
         <img [src]="darkmode == true? 'img/logo22.png' : 'img/logo.png'">
         <div class="pesquisa">
-        <input type="text" placeholder="Search by title, content, or tags…">
-        <div class="icons">
-        <button class="darkmode" (click)="ligarDesligarDarkMode()"><i class="fa-regular fa-lightbulb"></i></button>
-        <button class="logout" (click)="onClickLogout()"><i class="fa-solid fa-power-off"></i></button>
-        </div>
+            <input type="text" placeholder="Search by title, content, or tags…">
+            <div class="icons">
+                <button class="darkmode" (click)="ligarDesligarDarkMode()"><i
+                        class="fa-regular fa-lightbulb"></i></button>
+                <button class="logout" (click)="onClickLogout()"><i class="fa-solid fa-power-off"></i></button>
+            </div>
         </div>
     </header>
 
@@ -24,7 +25,7 @@
                 <button class="notes" (click)="onNoteClick(nota)">
 
 
-                    <img class="img-notes" src="img/img-cod.webp" alt="img">
+                    <img class="img-notes" *ngIf="(urlImagem || notaSelecionada.id) as src" src={{nota.imagemURL}} alt="preview">
 
                     <div class="itens">
 
@@ -64,8 +65,9 @@
 
 
             <div class="c-all">
+
+                <img *ngIf="(urlImagem || notaSelecionada.id) as src" src={{notaSelecionada.imagemURL}} alt="preview" />
                 
-                <img src="/img/img-cod.webp" alt="">
 
                 <div class="descript-upp">
                     <input class="title" [formControl]="tituloInput" type="text" value={{notaSelecionada.titulo}}>
@@ -112,8 +114,19 @@
         </div>
 
         <div class="rigth-side">
-            <button class="delete" (click)="deletarNotaSelecionada()">delete</button>
+
+            <div class="alt-im">
+
+             <label for="file">Nova imagem</label>
+                <input type="file" id="file" class="file__input" accept="image/*" (change)="definirImagem($event)"/>
+
+            </div>
+
+            <button class="delete" (click)="deletarNotaSelecionada()">Delete</button>
+
+
         </div>
+
         }@else{
 
         <p>Nenhuma nota seleconada</p>

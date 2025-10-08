@@ -210,6 +210,36 @@
 
 }
 
+
+
+.alt-im{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   width: 80%;
+  margin: 30px 0px 10px;
+  background-color: rgb(185, 185, 202);
+  border-radius: 10px;
+  height: 40px;
+  color: rgb(0, 0, 0);
+  border: none
+}
+
+.alt-im label{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.file__input{
+  background-color: transparent;
+  border: none;
+  display: none;
+
+}
+
 .obj {
   display: flex;
   font-size: 15px;
@@ -277,11 +307,12 @@
 
 .selecter {
   height: 20px;
+  border: none;
 }
 
 .delete {
   width: 80%;
-  margin: 30px 0px 10px;
+  margin: 10px 0px 10px;
   background-color: rgb(185, 185, 202);
   border-radius: 10px;
   height: 40px;
@@ -291,7 +322,7 @@
 
 ::ng-deep body.dark-mode .cabeçalio {
   background-color: #1c1c1c;
-  border: 2px solid white;
+  border-bottom: 2px solid white;
  }
 ::ng-deep body.dark-mode .darkmode {
   color: white;
@@ -317,7 +348,7 @@
   background-color: black;
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px solid white;
+  border: 2px solid white;
   align-items: center;
 }
 
@@ -329,6 +360,7 @@
   background-color: black;
   color: #F3F5F8;
   border-color: #F3F5F8;
+  border: 1px solid white;
 }
 
 ::ng-deep body.dark-mode .left-side {
@@ -350,7 +382,7 @@
   background-color: black;
   border-radius: 10px;
   margin-top: 20px;
-  color: #F3F5F8;
+  color: #f7f7f7;
 }
 
 ::ng-deep body.dark-mode .btn-notes {
