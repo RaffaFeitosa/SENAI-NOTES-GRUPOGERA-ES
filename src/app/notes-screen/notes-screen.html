@@ -60,18 +60,14 @@
 
         @if(notaSelecionada != null){
 
-
         <div class="center-panel">
-
 
             <div class="c-all">
 
                 <img *ngIf="(urlImagem || notaSelecionada.id) as src" src={{notaSelecionada.imagemURL}} alt="preview" />
                 
-
                 <div class="descript-upp">
                     <input class="title" [formControl]="tituloInput" type="text" value={{notaSelecionada.titulo}}>
-
 
                     <div class="c-detalhes"></div>
 
@@ -123,14 +119,12 @@
 
             <button class="delete" (click)="deletarNotaSelecionada()">Delete</button>
 
-
         </div>
 
         }@else{
 
         <p>Nenhuma nota seleconada</p>
         }
-
 
     </div>
 
