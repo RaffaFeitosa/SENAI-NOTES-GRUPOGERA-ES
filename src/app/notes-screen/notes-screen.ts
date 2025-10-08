@@ -13,11 +13,12 @@ interface INota {
   id: "";
   descricao: string;
   tags: string[],
+  image: string,
 }
 
 @Component({
   selector: 'app-notes-screen',
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule,CommonModule],
   templateUrl: './notes-screen.html',
   styleUrl: './notes-screen.css'
 })
@@ -27,7 +28,7 @@ export class NotesScreen {
   notaSelecionada: INota;
   notas: INota[];
   darkmode: boolean = false;
-  novaNota: INota = { titulo: "", UserId: "meuId", id: "", descricao: "", tags: [] };
+  novaNota: INota = { titulo: "", UserId: "meuId", id: "", descricao: "", tags: [],image:"" };
 
   tagSelecionada: "";
 
@@ -188,8 +189,8 @@ export class NotesScreen {
 
   }
 
-  async definirImagem(evento: Event): Promise<void> {
 
+  definirImagem(evento: Event): void {
     const input = evento.target as HTMLInputElement;
     if (!input.files || input.files.length === 0) {
       alert('Selecione uma imagem.');
@@ -219,6 +220,8 @@ export class NotesScreen {
     // Guarda o arquivo e gera a URL local para preview imediato
     this.arquivoImagem = file;
     this.urlImagem = URL.createObjectURL(file);
+    this.cd.detectChanges();
+
   }
 
 }

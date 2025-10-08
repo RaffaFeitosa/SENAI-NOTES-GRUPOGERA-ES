@@ -210,6 +210,36 @@
 
 }
 
+
+
+.alt-im{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   width: 80%;
+  margin: 30px 0px 10px;
+  background-color: rgb(185, 185, 202);
+  border-radius: 10px;
+  height: 40px;
+  color: rgb(0, 0, 0);
+  border: none
+}
+
+.alt-im label{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.file__input{
+  background-color: transparent;
+  border: none; 
+  display: none;
+
+}
+
 .obj {
   display: flex;
   font-size: 15px;
@@ -277,11 +307,12 @@
 
 .selecter {
   height: 20px;
+  border: none;
 }
 
 .delete {
   width: 80%;
-  margin: 30px 0px 10px;
+  margin: 10px 0px 10px;
   background-color: rgb(185, 185, 202);
   border-radius: 10px;
   height: 40px;
