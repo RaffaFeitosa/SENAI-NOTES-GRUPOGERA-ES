@@ -235,7 +235,7 @@
 
 .file__input{
   background-color: transparent;
-  border: none; 
+  border: none;
   display: none;
 
 }
@@ -348,9 +348,7 @@
   background-color: black;
   display: flex;
   justify-content: space-between;
-  border-top:white;
-  border-left: none;
-  border-right: none;
+  border: 2px solid white;
   align-items: center;
 }
 
