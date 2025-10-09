@@ -72,8 +72,8 @@ constructor(private fb: FormBuilder, private cd: ChangeDetectorRef) {
 
       console.log("JSON", json)
 
-      let meuToken = json.accessToken;
-      let meuId = json.user.id;
+      let meuToken = json.token;
+      let meuId = json.usuarioDTO.id;
 
       localStorage.setItem("meuToken", meuToken);
       localStorage.setItem("meuId", meuId);
