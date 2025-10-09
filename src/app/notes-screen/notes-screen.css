@@ -111,7 +111,7 @@
 }
 
 .tags {
-  font-size: 10px;
+  font-size: 12px;
   width: 50px;
   height: 13px;
   display: flex;
@@ -348,7 +348,7 @@
   background-color: black;
   display: flex;
   justify-content: space-between;
-  border: 2px solid white;
+  border: 1px solid white;
   align-items: center;
 }
 
@@ -437,4 +437,11 @@
 
 ::ng-deep body.dark-mode .descript-daw-obj {
   color: white;
+}
+
+
+::ng-deep body.dark-mode .alt-im {
+ background-color: #1c1c1c;
+ color: white;
+ 
 }
