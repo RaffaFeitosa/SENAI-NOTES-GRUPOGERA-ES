@@ -78,7 +78,7 @@ export class NotesScreen {
     let novaNotaResponse = await firstValueFrom(this.http.post("http://senainotes.us-east-1.elasticbeanstalk.com/swagger/api/anotacoes", novoChatObj, {
       headers: {
         "content-Type": "application/json",
-        Authorization: "Bearer " + localStorage.getItem("meuToken")
+        Authorization: "Bearer " + localStorage.getItem("token")
       }
 
     })) as INota;
