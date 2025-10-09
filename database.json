@@ -8,25 +8,27 @@
         ""
       ],
       "descricao": "aaaaaaaaaaaaaaa",
-      "imagemURL": "blob:http://localhost:4200/cef22e7c-1877-4f98-8199-0694a3d98adc"
+      "imagemURL": "blob:http://localhost:4200/0824ac41-8da2-45ed-b7df-0b8e8fa51748"
     },
     {
       "id": "d641",
       "titulo": "oi",
       "usuarioId": "f308e80f-d2fe-471d-95ab-70228ba2ed61",
       "tags": [
-        "cooking"
+        ""
       ],
       "descricao": "",
-      "imagemURL": ""
+      "imagemURL": "blob:http://localhost:4200/35fb8112-92bc-4051-bb2c-992c301819c7"
     },
     {
       "id": "4bea",
       "titulo": "TESTE",
       "usuarioId": "f308e80f-d2fe-471d-95ab-70228ba2ed61",
-      "tags": [],
+      "tags": [
+        ""
+      ],
       "descricao": "",
-      "imagemURL": ""
+      "imagemURL": "blob:http://localhost:4200/88d33f5d-4d87-4cdc-8db5-08a0133b01ac"
     },
     {
       "id": "e569",
