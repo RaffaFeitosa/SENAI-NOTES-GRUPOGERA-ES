@@ -75,7 +75,7 @@ export class NotesScreen {
 
     }
 
-    let novoChatResponse = await firstValueFrom(this.http.post("http://localhost:3000/notas", novoChatObj, {
+    let novaNotaResponse = await firstValueFrom(this.http.post("http://senainotes.us-east-1.elasticbeanstalk.com/swagger-ui/api/anotacoes", novoChatObj, {
       headers: {
         "content-Type": "application/json",
         Authorization: "Bearer " + localStorage.getItem("meuToken")
@@ -90,7 +90,7 @@ export class NotesScreen {
 
   async getNotas() {
 
-    let response = await firstValueFrom(this.http.get("http://localhost:3000/notas", {
+    let response = await firstValueFrom(this.http.get("http://senainotes.us-east-1.elasticbeanstalk.com/swagger-ui/api/anotacoes", {
       headers: {
 
         "Authorization": "Bearer " + localStorage.getItem("meuId")
@@ -132,7 +132,7 @@ export class NotesScreen {
    this.notaSelecionada.imagemURL = this.urlImagem
 
 
-    let response = await firstValueFrom(this.http.put("http://localhost:3000/notas/" + this.notaSelecionada.id, this.notaSelecionada)) as INota[];
+    let response = await firstValueFrom(this.http.put("http://senainotes.us-east-1.elasticbeanstalk.com/swagger-ui/api/anotacoes/buscarId/anotacoesId" + this.notaSelecionada.id, this.notaSelecionada)) as INota[];
 
     if (response) {
 
@@ -152,7 +152,7 @@ export class NotesScreen {
     }
 
     try {
-      let deleteResponse = await firstValueFrom(this.http.delete("http://localhost:3000/notas/" + this.notaSelecionada.id, {
+      let deleteResponse = await firstValueFrom(this.http.delete("http://senainotes.us-east-1.elasticbeanstalk.com/swagger-ui/api/anotacoes/anotacoesId" + this.notaSelecionada.id, {
         headers: {
           "Content-Type": "application/json",
           Authorization: "Bearer " + localStorage.getItem("meuToken")
@@ -160,10 +160,10 @@ export class NotesScreen {
       }
       )) as INota;
 
+      
     } catch (error) {
       console.log("Erro no delete: " + error);
     }
-
     this.notaSelecionada = null!;
     this.getNotas();
     this.cd.detectChanges();
