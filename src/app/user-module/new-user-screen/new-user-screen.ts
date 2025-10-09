@@ -61,7 +61,7 @@ export class NewUserScreen {
     }
 
 
-    let response = await fetch("https://senai-gpt-api.azurewebsites.net/users", {
+    let response = await fetch("http://senainotes.us-east-1.elasticbeanstalk.com/api/usuario", {
       method: "POST", //ENVIAR,
       headers: {
         "Content-Type": "application/json"

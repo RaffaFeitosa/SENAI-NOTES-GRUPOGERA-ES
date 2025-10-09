@@ -52,7 +52,7 @@ constructor(private fb: FormBuilder, private cd: ChangeDetectorRef) {
 
 
 
-    let response = await fetch("https://senai-gpt-api.azurewebsites.net/login", {
+    let response = await fetch("http://senainotes.us-east-1.elasticbeanstalk.com/api/auth", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

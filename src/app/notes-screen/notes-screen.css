@@ -438,3 +438,7 @@
 ::ng-deep body.dark-mode .descript-daw-obj {
   color: white;
 }
+::ng-deep body.dark-mode .alt-im{
+  background-color: #1c1c1c;
+  color: white;
+}
