@@ -160,10 +160,10 @@ export class NotesScreen {
       }
       )) as INota;
 
+      
     } catch (error) {
       console.log("Erro no delete: " + error);
     }
-
     this.notaSelecionada = null!;
     this.getNotas();
     this.cd.detectChanges();
