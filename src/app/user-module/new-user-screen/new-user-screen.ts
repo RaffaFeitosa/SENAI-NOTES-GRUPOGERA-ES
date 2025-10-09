@@ -60,7 +60,6 @@ export class NewUserScreen {
   //    this.passwordErrorMessege = ""
     }
 
-
     let response = await fetch("http://senainotes.us-east-1.elasticbeanstalk.com/api/usuario", {
       method: "POST", //ENVIAR,
       headers: {
