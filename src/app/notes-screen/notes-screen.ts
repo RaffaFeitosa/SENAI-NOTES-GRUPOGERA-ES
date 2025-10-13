@@ -75,7 +75,7 @@ export class NotesScreen {
 
     }
 
-    let novoChatResponse = await firstValueFrom(this.http.post("http://localhost:3000/notas", novoChatObj, {
+    let novoNotaResponse = await firstValueFrom(this.http.post("https://senai-gpt-api.azurewebsites.net/senainotes/notes4", novoChatObj, {
       headers: {
         "content-Type": "application/json",
         Authorization: "Bearer " + localStorage.getItem("meuToken")
@@ -90,10 +90,10 @@ export class NotesScreen {
 
   async getNotas() {
 
-    let response = await firstValueFrom(this.http.get("http://localhost:3000/notas", {
+    let response = await firstValueFrom(this.http.get("https://senai-gpt-api.azurewebsites.net/senainotes/notes4", {
       headers: {
 
-        "Authorization": "Bearer " + localStorage.getItem("meuId")
+        "Authorization": "Bearer " + localStorage.getItem("meuToken")
 
 
       }
@@ -132,8 +132,14 @@ export class NotesScreen {
    this.notaSelecionada.imagemURL = this.urlImagem
 
 
-    let response = await firstValueFrom(this.http.put("http://localhost:3000/notas/" + this.notaSelecionada.id, this.notaSelecionada)) as INota[];
+    let response = await firstValueFrom(this.http.put("https://senai-gpt-api.azurewebsites.net/senainotes/notes4/" + this.notaSelecionada.id, this.notaSelecionada,{
+      headers:{
 
+         "Authorization": "Bearer " + localStorage.getItem("meuToken")
+
+      }
+    }
+    )) as INota[];
     if (response) {
 
       console.log("atualizado", response);
@@ -152,7 +158,7 @@ export class NotesScreen {
     }
 
     try {
-      let deleteResponse = await firstValueFrom(this.http.delete("http://localhost:3000/notas/" + this.notaSelecionada.id, {
+      let deleteResponse = await firstValueFrom(this.http.delete("https://senai-gpt-api.azurewebsites.net/senainotes/notes4/" + this.notaSelecionada.id, {
         headers: {
           "Content-Type": "application/json",
           Authorization: "Bearer " + localStorage.getItem("meuToken")
