@@ -18,7 +18,7 @@ interface INota {
 
 @Component({
   selector: 'app-notes-screen',
-  imports: [FormsModule, ReactiveFormsModule,CommonModule],
+  imports: [FormsModule, ReactiveFormsModule, CommonModule],
   templateUrl: './notes-screen.html',
   styleUrl: './notes-screen.css'
 })
@@ -28,7 +28,7 @@ export class NotesScreen {
   notaSelecionada: INota;
   notas: INota[];
   darkmode: boolean = false;
-  novaNota: INota = { titulo: "", UserId: "meuId", id: "", descricao: "", tags: [],imagemURL:"" };
+  novaNota: INota = { titulo: "", UserId: "meuId", id: "", descricao: "", tags: [], imagemURL: "" };
 
   tagSelecionada: "";
 
@@ -129,13 +129,13 @@ export class NotesScreen {
   async onNoteSave() {
     this.notaSelecionada.titulo = this.tituloInput.value;
     this.notaSelecionada.tags = [this.tagSelecionada];
-   this.notaSelecionada.imagemURL = this.urlImagem
+    
 
 
-    let response = await firstValueFrom(this.http.put("https://senai-gpt-api.azurewebsites.net/senainotes/notesg4/" + this.notaSelecionada.id, this.notaSelecionada,{
-      headers:{
+    let response = await firstValueFrom(this.http.put("https://senai-gpt-api.azurewebsites.net/senainotes/notesg4/" + this.notaSelecionada.id, this.notaSelecionada, {
+      headers: {
 
-         "Authorization": "Bearer " + localStorage.getItem("meuToken")
+        "Authorization": "Bearer " + localStorage.getItem("meuToken")
 
       }
     }
@@ -227,6 +227,7 @@ export class NotesScreen {
     // Guarda o arquivo e gera a URL local para preview imediato
     this.arquivoImagem = file;
     this.urlImagem = URL.createObjectURL(file);
+    this.notaSelecionada.imagemURL = this.urlImagem
     this.cd.detectChanges();
   }
 

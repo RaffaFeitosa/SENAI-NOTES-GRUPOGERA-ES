@@ -64,7 +64,7 @@
 
             <div class="c-all">
 
-                <img *ngIf="(urlImagem || notaSelecionada.id) as src" src={{notaSelecionada.imagemURL}} alt="preview" />
+                <img *ngIf="(urlImagem || notaSelecionada.id)" [src]="notaSelecionada.imagemURL || `img/essa-mesma.jpg`" alt="preview" />
                 
                 <div class="descript-upp">
                     <input class="title" [formControl]="tituloInput" type="text" value={{notaSelecionada.titulo}}>
