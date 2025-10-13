@@ -75,7 +75,7 @@ export class NotesScreen {
 
     }
 
-    let novoNotaResponse = await firstValueFrom(this.http.post("https://senai-gpt-api.azurewebsites.net/senainotes/notes4", novoChatObj, {
+    let novoNotaResponse = await firstValueFrom(this.http.post("https://senai-gpt-api.azurewebsites.net/senainotes/notesg4", novoChatObj, {
       headers: {
         "content-Type": "application/json",
         Authorization: "Bearer " + localStorage.getItem("meuToken")
@@ -90,7 +90,7 @@ export class NotesScreen {
 
   async getNotas() {
 
-    let response = await firstValueFrom(this.http.get("https://senai-gpt-api.azurewebsites.net/senainotes/notes4", {
+    let response = await firstValueFrom(this.http.get("https://senai-gpt-api.azurewebsites.net/senainotes/notesg4", {
       headers: {
 
         "Authorization": "Bearer " + localStorage.getItem("meuToken")
@@ -132,7 +132,7 @@ export class NotesScreen {
    this.notaSelecionada.imagemURL = this.urlImagem
 
 
-    let response = await firstValueFrom(this.http.put("https://senai-gpt-api.azurewebsites.net/senainotes/notes4/" + this.notaSelecionada.id, this.notaSelecionada,{
+    let response = await firstValueFrom(this.http.put("https://senai-gpt-api.azurewebsites.net/senainotes/notesg4/" + this.notaSelecionada.id, this.notaSelecionada,{
       headers:{
 
          "Authorization": "Bearer " + localStorage.getItem("meuToken")
@@ -158,7 +158,7 @@ export class NotesScreen {
     }
 
     try {
-      let deleteResponse = await firstValueFrom(this.http.delete("https://senai-gpt-api.azurewebsites.net/senainotes/notes4/" + this.notaSelecionada.id, {
+      let deleteResponse = await firstValueFrom(this.http.delete("https://senai-gpt-api.azurewebsites.net/senainotes/notesg4/" + this.notaSelecionada.id, {
         headers: {
           "Content-Type": "application/json",
           Authorization: "Bearer " + localStorage.getItem("meuToken")
